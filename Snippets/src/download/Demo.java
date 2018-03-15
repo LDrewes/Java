@@ -28,9 +28,9 @@ public class Demo {
 			// Maak een connectie met het internet
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			in = conn.getInputStream();
-			String filePath = url.getPath();
 			
 			// Haal de bestandsnaam uit de url
+			String filePath = url.getPath();
 			String fileName = filePath.substring(filePath.lastIndexOf('/') + 1, filePath.length());
 			System.out.println("Filename: " + fileName);
 			
