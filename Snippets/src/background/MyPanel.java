@@ -18,7 +18,7 @@ public class MyPanel extends JPanel {
 		try {
 			background = ImageIO.read(new File("assets/images/goat.jpg"));
 		} catch (IOException e) {
-			System.out.println("Fout bij het laden van de voorgrond afbeelding. " + e.getMessage());
+			System.out.println("Fout bij het laden van de achtergrond afbeelding. " + e.getMessage());
 		}
 	}
 
