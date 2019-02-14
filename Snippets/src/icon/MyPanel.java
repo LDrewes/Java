@@ -35,10 +35,6 @@ public class MyPanel extends JPanel {
 			System.out.println("Couldn't find file: " + path + ", " + e.getMessage());
 		}
 
-		// Padding
-		button.setMargin(new Insets(10, 10, 10, 10));
-		// Geen achtergrond
-		button.setBackground(Color.CYAN);
 		// Geen border
 		button.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 

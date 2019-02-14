@@ -19,18 +19,22 @@ public class Demo {
 		FileOutputStream out = null;
 		String path = "assets/downloads/";
 		try {
-			URL url = new URL(
-					"http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg");
+			//URL url = new URL(
+			//		"http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg");
+			
+			URL url = new URL("http://yivesmirror.com/files/spigot/spigot-latest.jar");
 			
 			System.out.println("Starting download");
 			long t1 = System.currentTimeMillis();
 
 			// Maak een connectie met het internet
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11");
+
 			in = conn.getInputStream();
-			String filePath = url.getPath();
 			
 			// Haal de bestandsnaam uit de url
+			String filePath = url.getPath();
 			String fileName = filePath.substring(filePath.lastIndexOf('/') + 1, filePath.length());
 			System.out.println("Filename: " + fileName);
 			
